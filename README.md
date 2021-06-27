@@ -24,6 +24,3 @@ Waiting for your contribute
 
 ## Certificate
 ![ScreenShoot Apps](docs/image/certificate.jpg?raw=true)
-
-## Awarding Night
-![ScreenShoot Apps](docs/image/foto.jpg?raw=true)
