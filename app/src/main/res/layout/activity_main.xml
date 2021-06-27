@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.faisalamir.fruitandvegetable.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#FFCDD2"
+            android:layout_weight="0"
+            android:src="@drawable/apple"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="#EF5350">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apple"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fruit"
+                android:textSize="15sp"
+                android:paddingLeft="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#EF5350"
+            android:layout_weight="0"
+            android:src="@drawable/play"
+            android:id="@+id/button_apple"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#F8BBD0"
+            android:layout_weight="0"
+            android:src="@drawable/banana"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="#AD1457">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Banana"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fruit"
+                android:textSize="15sp"
+                android:paddingLeft="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#AD1457"
+            android:layout_weight="0"
+            android:src="@drawable/play"
+            android:id="@+id/button_banana"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#E1BEE7"
+            android:layout_weight="0"
+            android:src="@drawable/cherri"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="#AB47BC">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cherry"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fruit"
+                android:textSize="15sp"
+                android:paddingLeft="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#AB47BC"
+            android:layout_weight="0"
+            android:src="@drawable/play"
+            android:id="@+id/button_cherry"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#D1C4E9"
+            android:layout_weight="0"
+            android:src="@drawable/grape"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="#7E57C2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grape"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fruit"
+                android:textSize="15sp"
+                android:paddingLeft="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#7E57C2"
+            android:layout_weight="0"
+            android:src="@drawable/play"
+            android:id="@+id/button_grape"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#FFCDD2"
+            android:layout_weight="0"
+            android:src="@drawable/lemon"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="#EF5350">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lemon"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fruit"
+                android:textSize="15sp"
+                android:paddingLeft="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#EF5350"
+            android:layout_weight="0"
+            android:src="@drawable/play"
+            android:id="@+id/button_lemon"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#F8BBD0"
+            android:layout_weight="0"
+            android:src="@drawable/orange"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="#AD1457">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Orange"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fruit"
+                android:textSize="15sp"
+                android:paddingLeft="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#AD1457"
+            android:layout_weight="0"
+            android:src="@drawable/play"
+            android:id="@+id/button_orange"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#E1BEE7"
+            android:layout_weight="0"
+            android:src="@drawable/pear"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="#AB47BC">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pear"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fruit"
+                android:textSize="15sp"
+                android:paddingLeft="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#AB47BC"
+            android:layout_weight="0"
+            android:src="@drawable/play"
+            android:id="@+id/button_pear"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#D1C4E9"
+            android:layout_weight="0"
+            android:src="@drawable/strawberry"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="#7E57C2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Strawberry"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fruit"
+                android:textSize="15sp"
+                android:paddingLeft="5dp"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="#7E57C2"
+            android:layout_weight="0"
+            android:src="@drawable/play"
+            android:id="@+id/button_strawberry"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+
