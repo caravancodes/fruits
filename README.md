@@ -4,6 +4,10 @@ My First Android Application
 ## Screnshoot apps
 ![ScreenShoot Apps](docs/image/ss_1.jpg?raw=true)
 
+| SS Apps |  Email IAK              |
+|:------------------:|:----------------------------:|
+|<span align="center"><img width="200px" height="360px" src="docs/image/ss_2.png"></span> | <span align="center"><img width="200px" height="360px" src="docs/image/email.jpg"></span> |
+
 ## Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me
 
