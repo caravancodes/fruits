@@ -6,7 +6,7 @@ My First Android Application
 
 | SS Apps |  Email IAK              |
 |:------------------:|:----------------------------:|
-|<span align="center"><img width="200px" height="450px" src="docs/image/ss_2.png"></span> | <span align="center"><img width="200px" height="450px" src="docs/image/email.jpg"></span> |
+|<span align="center"><img width="200px" height="400px" src="docs/image/ss_2.png"></span> | <span align="center"><img width="200px" height="400px" src="docs/image/email.jpg"></span> |
 
 ## Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me
