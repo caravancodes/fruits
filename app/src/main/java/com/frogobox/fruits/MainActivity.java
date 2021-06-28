@@ -1,10 +1,12 @@
-package com.example.faisalamir.fruitandvegetable;
+package com.frogobox.fruits;
 
 import android.media.MediaPlayer;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.frogobox.fruits.fruitandvegetable.R;
 
 public class MainActivity extends AppCompatActivity {
 

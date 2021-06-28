@@ -1,4 +1,4 @@
-package com.example.faisalamir.fruitandvegetable;
+package com.frogobox.fruits;
 
 import org.junit.Test;
 
