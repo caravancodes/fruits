@@ -1,96 +1,106 @@
-package com.frogobox.fruits;
+package com.frogobox.fruits
 
-import android.media.MediaPlayer;
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
+import android.media.MediaPlayer
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import com.frogobox.fruits.fruitandvegetable.R
+import com.frogobox.fruits.fruitandvegetable.databinding.ActivityMainBinding
+import com.frogobox.recycler.core.IFrogoViewAdapter
 
-import com.frogobox.fruits.fruitandvegetable.R;
+class MainActivity : AppCompatActivity() {
 
-public class MainActivity extends AppCompatActivity {
+    private lateinit var binding : ActivityMainBinding
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
+        setContentView(binding.root)
 
-        ImageView play_apple = (ImageView) findViewById(R.id.button_apple);
-        ImageView play_banana = (ImageView) findViewById(R.id.button_banana);
-        ImageView play_cherry = (ImageView) findViewById(R.id.button_cherry);
-        ImageView play_grape = (ImageView) findViewById(R.id.button_grape);
-        ImageView play_lemon = (ImageView) findViewById(R.id.button_lemon);
-        ImageView play_orange = (ImageView) findViewById(R.id.button_orange);
-        ImageView play_pear = (ImageView) findViewById(R.id.button_pear);
-        ImageView play_strawberry = (ImageView) findViewById(R.id.button_strawberry);
+        setupUI()
 
-        final MediaPlayer pl_apple = MediaPlayer.create(MainActivity.this,R.raw.apple);
-        final MediaPlayer pl_banana = MediaPlayer.create(MainActivity.this,R.raw.banana);
-        final MediaPlayer pl_cherry = MediaPlayer.create(MainActivity.this,R.raw.cherry);
-        final MediaPlayer pl_grape = MediaPlayer.create(MainActivity.this,R.raw.grape);
-        final MediaPlayer pl_lemon = MediaPlayer.create(MainActivity.this,R.raw.lemon);
-        final MediaPlayer pl_orange = MediaPlayer.create(MainActivity.this,R.raw.orange);
-        final MediaPlayer pl_pear = MediaPlayer.create(MainActivity.this,R.raw.pear);
-        final MediaPlayer pl_stawberry = MediaPlayer.create(MainActivity.this,R.raw.strawberry);
+    }
 
-        play_apple.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pl_apple.start();
+    private fun setupUI() {
+
+        val callback = object : IFrogoViewAdapter<Fruit>{
+            override fun onItemClicked(data: Fruit) {}
+            override fun onItemLongClicked(data: Fruit) {}
+            override fun setupInitComponent(view: View, data: Fruit) {
+
+                val btn = view.findViewById<ImageView>(R.id.btn_play)
+                val iv = view.findViewById<ImageView>(R.id.iv_fruit)
+                val root = view.findViewById<LinearLayout>(R.id.root)
+                val name = view.findViewById<TextView>(R.id.name)
+                val kind = view.findViewById<TextView>(R.id.kind)
+                val media = MediaPlayer.create(this@MainActivity, data.music)
+
+                val colorBackground1 = ContextCompat.getColor(this@MainActivity, R.color.colorBackground1)
+                val colorBackground2 = ContextCompat.getColor(this@MainActivity, R.color.colorBackground2)
+                val colorBackground3 = ContextCompat.getColor(this@MainActivity, R.color.colorBackground3)
+                val colorBackground4 = ContextCompat.getColor(this@MainActivity, R.color.colorBackground4)
+
+                val pl_cherry = MediaPlayer.create(this@MainActivity, R.raw.cherry)
+
+                val colorImage1 = ContextCompat.getColor(this@MainActivity, R.color.colorImage1)
+                val colorImage2 = ContextCompat.getColor(this@MainActivity, R.color.colorImage2)
+                val colorImage3 = ContextCompat.getColor(this@MainActivity, R.color.colorImage3)
+                val colorImage4 = ContextCompat.getColor(this@MainActivity, R.color.colorImage4)
+
+                when (data.type) {
+                    "1" -> {
+                        root.setBackgroundColor(colorBackground1)
+                        iv.setBackgroundColor(colorImage1)
+                    }
+                    "2" -> {
+                        root.setBackgroundColor(colorBackground2)
+                        iv.setBackgroundColor(colorImage2)
+                    }
+                    "3" -> {
+                        root.setBackgroundColor(colorBackground3)
+                        iv.setBackgroundColor(colorImage3)
+                    }
+                    "4" -> {
+                        root.setBackgroundColor(colorBackground4)
+                        iv.setBackgroundColor(colorImage4)
+                    }
+                }
+
+                iv.setImageResource(data.image)
+                name.text = data.name
+                kind.text = data.kind
+
+                btn.setOnClickListener{
+                    media.start()
+                }
+
             }
-        });
+        }
 
-        play_banana.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pl_banana.start();
-            }
-        });
+        binding.rv.injector<Fruit>()
+            .addData(fruits())
+            .addCustomView(R.layout.list_item)
+            .createLayoutLinearVertical(false)
+            .addCallback(callback)
+            .build()
+    }
 
-        play_cherry.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pl_cherry.start();
-            }
-        });
-
-        play_grape.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pl_grape.start();
-            }
-        });
-
-        play_lemon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pl_lemon.start();
-            }
-        });
-
-        play_orange.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pl_orange.start();
-            }
-        });
-
-        play_pear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pl_pear.start();
-            }
-        });
-
-        play_strawberry.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pl_stawberry.start();
-            }
-        });
-
-
-
+    private fun fruits() : MutableList<Fruit> {
+        val data = mutableListOf<Fruit>()
+        data.add(Fruit("1", "Apple", "Fruit",R.drawable.apple, R.raw.apple))
+        data.add(Fruit("2", "Banana", "Fruit",R.drawable.banana, R.raw.banana))
+        data.add(Fruit("3", "Cherry", "Fruit",R.drawable.cherri, R.raw.cherry))
+        data.add(Fruit("4", "Grape", "Fruit",R.drawable.grape, R.raw.grape))
+        data.add(Fruit("1", "Lemon", "Fruit",R.drawable.lemon, R.raw.lemon))
+        data.add(Fruit("2", "Orange", "Fruit",R.drawable.orange, R.raw.orange))
+        data.add(Fruit("3", "Pear", "Fruit",R.drawable.pear, R.raw.pear))
+        data.add(Fruit("4", "Strawberry", "Fruit",R.drawable.strawberry, R.raw.strawberry))
+        return data
     }
 
 }
